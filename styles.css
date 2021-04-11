@@ -1,0 +1,42 @@
+html{
+    background-color: grey;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+nav a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    margin: 0 20px;
+}
+
+nav a:hover {
+    background-color: aqua;
+    color: white;
+}
+
+section {
+    display: grid;
+    margin: 20px auto;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 10px;
+    width: 70%;
+}
+
+.right {
+    background-color: white;
+}
+
+.left {
+    background-color: white;
+}
