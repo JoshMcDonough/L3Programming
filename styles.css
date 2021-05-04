@@ -32,7 +32,7 @@ nav a:hover {
 
 nav img {
     margin-left: 30px;
-    width: 150px;
+    width: 8vw;
     margin-top: 1vh;
 }
 
@@ -53,6 +53,17 @@ section {
     border-radius: 2%;
 }
 
+.smallBox1 h1 {
+    text-align: center;
+    margin-top: 2vh;
+}
+
+.smallBox1 p {
+    margin-left: 7vh;
+    margin-right: 7vh;
+    margin-top: 2vh;
+}
+
 .smallBox2 {
     grid-column: 3/5;
     grid-row: 3/4;
@@ -68,3 +79,15 @@ section {
     margin: 1vh 1vw;
     border-radius: 2%;
 }
+
+.bigBox img {
+    width: 43vw;
+    margin-top: -2vw;
+}
+
+
+
+
+
+
+
