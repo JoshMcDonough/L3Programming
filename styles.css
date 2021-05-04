@@ -1,5 +1,6 @@
 html {
     background-color: black;
+    font-family: 'Roboto Mono', monospace;
 }
 
 * {
@@ -23,6 +24,7 @@ nav a {
     margin-top: 2vh;
     margin-left: 30px;
     margin-right: 20px;
+    font-family: 'Krona One', sans-serif;
 }
 
 nav a:hover {
@@ -56,9 +58,11 @@ section {
 .smallBox1 h1 {
     text-align: center;
     margin-top: 2vh;
+    font-family: 'Krona One', sans-serif;
 }
 
 .smallBox1 p {
+    font-family: 'Roboto Mono', monospace;
     margin-left: 7vh;
     margin-right: 7vh;
     margin-top: 2vh;
@@ -70,6 +74,11 @@ section {
     background-color: white;
     margin: 1vh 1vw;
     border-radius: 2%;
+}
+
+.smallBox2 img {
+    margin-left: 4vw;
+    width: 35vw;
 }
 
 .bigBox {
