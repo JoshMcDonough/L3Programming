@@ -94,9 +94,36 @@ section {
     margin-top: -2vw;
 }
 
+.contact {
+    grid-column: 1/5;
+    grid-row: 2/4;
+    background-color: white;
+    margin: 1vh 10vw;
+    border-radius: 2%;
+}
 
+.contact img {
+    width: 20vh;
+    margin-left: 5vh;
+    float: left;
+}
 
+.contact h1 {
+    text-align: center;
+    margin-top: 3vh;
+    font-family: 'Krona One', sans-serif;
+    font-size: 30px;
+}
 
+.contact h2 {
+    margin-top: 3vh;
+    margin-left: 5vh;
+    font-family: 'Krona One', sans-serif;
 
+}
 
-
+.contact p {
+    margin-top: 5vh;
+    margin-left: 5vh;
+    font-size: 30px;
+}
