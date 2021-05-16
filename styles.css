@@ -1,6 +1,7 @@
 html {
     background-color: black;
     font-family: 'Roboto Mono', monospace;
+    
 }
 
 * {
@@ -79,6 +80,27 @@ section {
 .smallBox2 img {
     margin-left: 4vw;
     width: 35vw;
+}
+
+.store {
+    display: grid;
+    grid-template-columns: 20vw 25vw 25vw 20vw;
+    grid-template-rows: 10vh 35vh 35vh 10vh;
+    grid-auto-rows: fill;
+
+    grid-column: 1/5;
+    grid-row: 2/4;
+    background-color: white;
+    margin: 1vh 10vw;
+    border-radius: 2%;
+
+}
+
+.store h1 {
+    text-align: center;
+    margin-top: 3vh;
+    font-family: 'Krona One', sans-serif;
+    font-size: 30px;
 }
 
 .bigBox {
