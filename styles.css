@@ -116,6 +116,15 @@ section {
     width: 100%;
 }
 
+/*
+li {
+    width: 30%;
+}
+
+li img{
+    width: 100%;
+}
+*/
 
 .contact {
     grid-column: 1/5;

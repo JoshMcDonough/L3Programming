@@ -7,7 +7,46 @@
     <title>Whuffy</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
+<script>
+    var items = [
+        ['Images/pepeBH.png',39.99,'Product 1'],
+        ['Images/BlackBH.png',39.99,'Product 2'],
+        ['Images/SupremeBH.png',39.99,'Product 3'],
+        ['Images/TrollBH.png',39.99,'Product 4'],
+        ['Images/greenBH.png',39.99,'Product 5'],
+        ['Images/RedHat.png',39.99,'Product 6']
+    ]
+    
+    
+    function run() {
+        var main = document.getElementById('products');
+        
+        //all Elements to be added
+        for(var i = 0; i < items.length; i++)
+        
+        var ele = document.createElement('li');
+        var pic = document.createElement('img');
+        var add = document.createElement('button');
+        var typeBox = document.createElement('input');
+        
+        //push elements into HTML
+        main.appendChild(ele);
+        ele.appendChild(pic);
+        ele.appendChild(price);
+        ele.appendChild(add);
+        ele.appendChild(typeBox);
+        
+        //edit pushed elements info from array
+        
+        pic.innerHTML = items[i][0]; 
+        price.innerHTML = '$' + items[i][1]; 
+        price.innerHTML = items[i][2]; 
+        add.innerHTML = 'add';
+        typeBox.type = 'number';
+        
+    }
+    
+</script>
 <body>
     <nav>
         <img src="Images/WhuffyLogo.png" />
@@ -17,41 +56,42 @@
         <a href="checkout.html">Checkout</a>
     </nav>
     <div class="store">
-        <section>
-            <ul class="products">
+        <section onload="run()">
+            
+            <ul class="products" id="products">
                 <li>
                     <img src="Images/pepeBH.png">
-                    <h1>Bucket Hat</h1>
+                    <h1>Pepe Bucket Hat</h1>
                     <p>$40</p>
                 </li>
 
                 <li>
                     <img src="Images/BlackBH.png">
-                    <h1>Bucket Hat</h1>
+                    <h1>Original Bucket Hat</h1>
                     <p>$40</p>
                 </li>
 
                 <li>
                     <img src="Images/SupremeBH.png">
-                    <h1>Bucket Hat</h1>
+                    <h1>Designer Bucket Hat</h1>
                     <p>$40</p>
                 </li>
 
                 <li>
                     <img src="Images/TrollBH.png">
-                    <h1>Bucket Hat</h1>
+                    <h1>TrollFace Bucket Hat</h1>
                     <p>$40</p>
                 </li>
 
                 <li>
-                    <img src="Images/bucket-hats.png">
-                    <h1>Bucket Hat</h1>
+                    <img src="Images/greenBH.png">
+                    <h1>Green Bucket Hat</h1>
                     <p>$40</p>
                 </li>
 
                 <li>
-                    <img src="Images/WhuffyLogo.png">
-                    <h1>Bucket Hat</h1>
+                    <img src="Images/RedHat.png">
+                    <h1>Red Bucket Hat</h1>
                     <p>$40</p>
                 </li>
 
