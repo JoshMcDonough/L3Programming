@@ -1,4 +1,3 @@
-
 var items = [
   ['Images/pepeBH.png', 39.99, 'Pepe Bucket Hat'],
   ['Images/BlackBH.png', 39.99, 'Classic Bucket Hat'],
@@ -45,35 +44,35 @@ function run() {
     add.dataset.cartIndex = i;
     add.addEventListener('click', adding, false);
   }
-}
+} // end func
 
-  function adding(event) {
-    const NUM = event.currentTarget.dataset.cartIndex;
+function adding(event) {
+  const NUM = event.currentTarget.dataset.cartIndex;
 
-    cartItems.push([items[NUM]]);
-    cartItems[cartItems.length - 1][1] =
-      Number(document.getElementById('input' + NUM).value);
+  cartItems.push([items[NUM]]);
+  cartItems[cartItems.length - 1][1] =
+    Number(document.getElementById('input' + NUM).value);
 
-    updateCart();
+  updateCart();
+} // end func
+
+
+var totalItems = 0;
+
+function updateCart() {
+  var itemCounter = document.getElementById('itemCount');
+
+  totalItems = 0;
+
+  for (var i = 0; i < cartItems.length; i++) {
+    totalItems += cartItems[i][1]
   }
 
-
-  var totalItems = 0;
-
-  function updateCart() {
-    var itemCounter = document.getElementById('itemCount');
-
-    totalItems = 0;
-
-    for (var i = 0; i < cartItems.length; i++) {
-      totalItems += cartItems[i][1]
-    }
-
-    window.sessionStorage.setItem('cartItems',
+  window.sessionStorage.setItem('cartItems',
     JSON.stringify(cartItems));
 
-    itemCounter.innerHTML = totalItems;
-  }
+  itemCounter.innerHTML = totalItems;
+} // end func
 
 
 
@@ -123,14 +122,14 @@ function loadCart() { // loading products onto checkout page
   }
 } //end function
 
-  function deleteMe(){
-    const NUM = event.currentTarget.dataset.cartIndex;
+function deleteMe() {
+  const NUM = event.currentTarget.dataset.cartIndex;
 
-    delete cartItems[NUM];
+  delete cartItems[NUM];
 
-    cartItems = cartItems.filter(item => item !== undefined);
+  cartItems = cartItems.filter(item => item !== undefined);
 
-    updateCart();
-    loadCart();
-    window.location.reload(true);
-  } //end function
+  updateCart();
+  loadCart();
+  window.location.reload(true);
+} //end function
