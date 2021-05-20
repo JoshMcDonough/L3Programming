@@ -1,7 +1,7 @@
 html {
     background-color: black;
     font-family: 'Roboto Mono', monospace;
-    
+
 }
 
 * {
@@ -37,6 +37,7 @@ nav img {
     margin-left: 30px;
     width: 8vw;
     margin-top: 1vh;
+    margin-bottom: 1vh;
 }
 
 section {
@@ -95,14 +96,6 @@ section {
     margin-top: -2vw;
 }
 
-.store section {
-    background-color: darkgray;
-    border-radius: 2%;
-    min-height: 300px;
-    width: 80%;
-    margin: 30px auto;
-}
-
 .products {
     width: 90%;
     margin: 0px auto;
@@ -112,30 +105,38 @@ section {
     list-style: none;
 }
 
-.products li img{
+ul {
+    margin: 0px;
+    padding: 0px;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+}
+
+li {
+    width: 100%;
+    background-color: grey;
+    list-style: none;
+    padding: 20px;
+    margin: 10px;
+}
+
+.products li img {
     width: 100%;
 }
 
-.products h1{
+.products h1 {
     display: inline-block;
     margin: 0px 20px;
-    
+    color: white;
+
 }
 
-.products h2{
+.products h2 {
     color: red;
-    display: block;
+    display: inline-block;
 }
-
-/*
-li {
-    width: 30%;
-}
-
-li img{
-    width: 100%;
-}
-*/
 
 .contact {
     grid-column: 1/5;
@@ -169,4 +170,9 @@ li img{
     margin-top: 5vh;
     margin-left: 5vh;
     font-size: 30px;
+}
+
+.cartproducts {
+  display: block;
+    grid-template-columns: 1fr 1fr 1fr;
 }
