@@ -120,7 +120,7 @@ function loadCart() { // loading products onto checkout page
 
     amount.innerHTML = cartItems[i][1];
     subtotal.innerHTML = '$' + cartItems[i][1] * cartItems[i][0][1];
-  }//work out a gran total and push into html
+  }
 } //end function
 
   function deleteMe(){
