@@ -116,6 +116,17 @@ section {
     width: 100%;
 }
 
+.products h1{
+    display: inline-block;
+    margin: 0px 20px;
+    
+}
+
+.products h2{
+    color: red;
+    display: block;
+}
+
 /*
 li {
     width: 30%;

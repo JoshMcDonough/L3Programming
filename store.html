@@ -9,45 +9,71 @@
 </head>
 <script>
     var items = [
-        ['Images/pepeBH.png',39.99,'Product 1'],
-        ['Images/BlackBH.png',39.99,'Product 2'],
-        ['Images/SupremeBH.png',39.99,'Product 3'],
-        ['Images/TrollBH.png',39.99,'Product 4'],
-        ['Images/greenBH.png',39.99,'Product 5'],
-        ['Images/RedHat.png',39.99,'Product 6']
-    ]
+        ['Images/pepeBH.png', 39.99, 'Product 1'],
+        ['Images/BlackBH.png', 39.99, 'Product 2'],
+        ['Images/SupremeBH.png', 39.99, 'Product 3'],
+        ['Images/TrollBH.png', 39.99, 'Product 4'],
+        ['Images/greenBH.png', 39.99, 'Product 5'],
+        ['Images/RedHat.png', 39.99, 'Product 6']
+    ];
+
+    var cartItems = [];
     
     
     function run() {
         var main = document.getElementById('products');
-        
+
         //all Elements to be added
-        for(var i = 0; i < items.length; i++)
+        for(var i = 0; i < items.length; i++) {
+
+            var ele = document.createElement('li');
+            var pic = document.createElement('img');
+            var heading = document.createElement('h1');
+            var price = document.createElement('h2');
+            var add = document.createElement('button');
+            var typeBox = document.createElement('input');
+
+            //push elements into HTML
+            main.appendChild(ele);
+            ele.appendChild(pic);
+            ele.appendChild(heading);
+            ele.appendChild(price);
+            ele.appendChild(add);
+            ele.appendChild(typeBox);
+
+            //edit pushed elements info from array
+
+            pic.src = items[i][0];
+            price.innerHTML = '$' + items[i][1];
+            heading.innerHTML = items[i][2];
+            add.innerHTML = 'add';
+            typeBox.type = 'number';
+            
+            typeBox.setAttribute('id','input' + i);
+            typeBox.value = 1;
+
+            add.dataset.cartIndex = i;
+            add.addEventListener('click', adding, false);
+        }
+
+        function adding(event) {
+            const NUM = event.currentTarget.dataset.cartIndex;
+
+            cartItems.push([items[NUM]]);
+            cartItems[cartItems.length-1][1] = 
+            Number(document.getElementById('input'+NUM).value);
+            
+            updateCart();
+        }
         
-        var ele = document.createElement('li');
-        var pic = document.createElement('img');
-        var add = document.createElement('button');
-        var typeBox = document.createElement('input');
-        
-        //push elements into HTML
-        main.appendChild(ele);
-        ele.appendChild(pic);
-        ele.appendChild(price);
-        ele.appendChild(add);
-        ele.appendChild(typeBox);
-        
-        //edit pushed elements info from array
-        
-        pic.innerHTML = items[i][0]; 
-        price.innerHTML = '$' + items[i][1]; 
-        price.innerHTML = items[i][2]; 
-        add.innerHTML = 'add';
-        typeBox.type = 'number';
-        
+        function updateCart(){
+            
+        }
     }
-    
+
 </script>
-<body>
+
+<body onload="run()">
     <nav>
         <img src="Images/WhuffyLogo.png" />
         <a href="index.html">Home</a>
@@ -56,9 +82,10 @@
         <a href="checkout.html">Checkout</a>
     </nav>
     <div class="store">
-        <section onload="run()">
-            
+        <section>
             <ul class="products" id="products">
+                <h1>Cart Items:</h1><h2 id='itemCount'>0</h2><br>
+<!--
                 <li>
                     <img src="Images/pepeBH.png">
                     <h1>Pepe Bucket Hat</h1>
@@ -94,6 +121,7 @@
                     <h1>Red Bucket Hat</h1>
                     <p>$40</p>
                 </li>
+-->
 
 
 
