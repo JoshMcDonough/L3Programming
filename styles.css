@@ -8,20 +8,19 @@ html {
   padding: 0;
 }
 
- /* Nav styles */
+/* Nav styles */
 nav {
   background-color: white;
   display: grid;
   grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
   grid-template-rows: 8vh;
-  grid-auto-rows: fill;
 }
 
 nav a {
   color: black;
   font-size: 2vw;
   text-decoration: none;
-  margin: 0, 20px;
+  margin: 0 20px;
   margin-top: 2vh;
   margin-left: 30px;
   margin-right: 20px;
@@ -39,12 +38,12 @@ nav img {
   margin-top: 1vh;
   margin-bottom: 5vh;
 }
- /* Section grid */
+
+/* Section grid */
 section {
   display: grid;
   grid-template-columns: 20vw 25vw 25vw 20vw;
   grid-template-rows: 10vh 35vh 35vh 10vh;
-  grid-auto-rows: fill;
   margin-left: 5vw;
   margin-right: 5vw;
 }
@@ -106,7 +105,7 @@ section {
   list-style: none;
 }
 
- /* Javascript grids */
+/* Javascript grids */
 ul {
   margin: 0px;
   padding: 0px;
@@ -142,7 +141,7 @@ li {
   margin-top: 2vh;
 }
 
- /* Contact grid */
+/* Contact grid */
 .contact {
   grid-column: 1/5;
   grid-row: 2/4;
